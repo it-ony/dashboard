@@ -16,7 +16,7 @@
         {
             "js": [ "content.js" ],
             "matches": [ "http://*/*", "https://*/*"],
-            "run_at": "document_end",
+            "run_at": "document_idle",
             "all_frames": true
         }
     ],
