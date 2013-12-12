@@ -42,6 +42,21 @@
             }
         },
         dashboardClient = {
+            ready: function(data, event) {
+
+                // find frame
+                for (var i = 0; i < frames.length; i++) {
+                    var frame = frames[i];
+
+                    if (frame.contentWindow === event.source) {
+                        // found the frame
+
+                        // send by the iframe, after the content script has been injected
+                        processCssForFrame(frame);
+                    }
+                }
+
+            }
         },
         client = isIframe ? iFrameClient : dashboardClient;
 
@@ -57,19 +72,21 @@
                 }, "*");
             };
 
-            processCssForFrame(frame);
-
             var refreshRate = parseInt(frame.getAttribute("data-refresh"));
             if (!isNaN(refreshRate)) {
                 // a number was given in seconds
                 setInterval(function() {
-
                     frame.invoke("reload");
-
 
                 }, refreshRate * 1000);
             }
         });
+    } else {
+        // Notify the dashboard that the content script has been loaded
+        // so the dashboard can inject us the css
+        window.parent.postMessage({
+            method: "ready"
+        }, "*");
     }
 
     window.addEventListener("message", function(event) {
