@@ -1,6 +1,3 @@
-dashboard
-=========
-
 A html iframe based customizable dashboard chrome extension. A what?
 
 This is a chrome extension that helps create a html based monitoring dashboard. The dashbord
@@ -10,14 +7,14 @@ custom css, restore scroll positions and refresh the page in a regular interval 
 modifying the original source.
 
 Usage
----
+===
 
 Start with a html page and embed external html documents as iframe.
 
 To enable the dashboard functionality for the site the following meta tag must be present
 in the head section.
 
-```
+```html
 <meta name="dashboard" />
 ```
 
@@ -25,12 +22,14 @@ You can use the dashboard like a normal html page with css and javascript.
 For iFrames the extension evaluate some extra attributes controlling the behaviour of the
 frame. These are the available attributes:
 
-### data-refresh
+data-refresh
+---
 
 With the `data-refresh` attribute you can specify an refresh rate of the iframe. The value
 is the refresh interval in seconds.
 
-### data-css
+data-css
+---
 
 The `data-css` attribute defines a custom css injected into the iframe. The value can be
 
@@ -44,6 +43,24 @@ The `data-css` attribute defines a custom css injected into the iframe. The valu
     }
 </script>
 ```
+
+
+Tips
+===
+
+If you want to embed frames, that deny embedding via the `X-Frame-Options` header, you
+can help yourself with the
+[ignore-x-frame-headers](https://chrome.google.com/webstore/detail/ignore-x-frame-headers) chrome extension.
+
+License
+===
+
+This project is available under the MIT license. See [LICENSE](https://github.com/it-ony/dashboard/blob/master/LICENSE) for details.
+
+
+
+
+
 
 
 
