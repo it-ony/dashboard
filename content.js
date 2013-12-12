@@ -104,11 +104,6 @@
 
     }, false);
 
-    console.log({
-        greeting: document.title,
-        isIframe: isIframe,
-        isDashboard: isDashboard
-    });
 
     function processCssForFrame(frame) {
         var cssUri = frame.getAttribute("data-css"),
