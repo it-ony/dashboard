@@ -87,7 +87,12 @@
 
             ready: function (data, event) {
                 var frame = this._getIFrameForWindow(event.source);
-                frame && processCssForFrame(frame.frame);
+
+                if (!frame) {
+                    return;
+                }
+
+                processCssForFrame(frame.frame);
 
                 framesLoading[frame.index] = false;
 
