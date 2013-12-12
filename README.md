@@ -6,6 +6,8 @@ calenders, travis, ...) you cannot customize the service. This extension allows 
 custom css, restore scroll positions and refresh the page in a regular interval without
 modifying the original source.
 
+Download the chrome extension from here: https://chrome.google.com/webstore/detail/monitor-dashboard/hiachllpealpbigdgiocibkaebhifhgd
+
 Usage
 ===
 
