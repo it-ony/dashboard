@@ -1,0 +1,35 @@
+{
+    "manifest_version": 2,
+
+    "name": "monitor-dashboard",
+    "version": "0.1.0",
+
+    "author": "Tony Findeisen",
+
+    "description": "A html iframe based customizable dashboard chrome extension",
+
+    "homepage_url": "http://it-ony.github.com/dashboard",
+
+    "devtools_page": "chrome/devtools.html",
+
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+
+    "content_scripts": [
+        {
+            "js": [ "content.js" ],
+            "matches": [ "http://*/*", "https://*/*"],
+            "run_at": "document_end",
+            "all_frames": true
+        }
+    ],
+
+    "permissions": [
+        "tabs",
+        "http://*/*",
+        "https://*/*",
+        "file://*/*"
+    ]
+}
