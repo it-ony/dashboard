@@ -8,19 +8,42 @@
 </head>
 <body>
 
-<script type="text/css" id="shop5css">
-    body {
-
-        background: red;
+<script type="text/css" id="weather">
+    .currentconditions {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: white;
+        width: 600px;
+        z-index: 1000;
     }
 
+    #doppler {
+        display: none;
+    }
+</script>
 
+<script type="text/css" id="npm">
 
+    #statusbox {
+        margin: 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    #credits {
+       position: absolute;
+       bottom: -50px;
+    }
 
 </script>
 
-<iframe src="https://build.spreadomat.net/jenkins/view/Purchase/view/Shop5/job/Shop5/"
-        data-refresh="30" data-css="#shop5css" width="300" height="300"></iframe>
+
+<iframe src="http://local.msn.com/worldweather.aspx"
+        data-refresh="600" data-css="#weather" width="600" height="290"></iframe>
+<iframe src="http://status.npmjs.org/"
+        data-refresh="30" data-css="#npm" width="380" height="185"></iframe>
 
 </body>
 </html>
