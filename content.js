@@ -127,6 +127,16 @@
                 }, "*");
             };
 
+            var x = parseInt(frame.getAttribute("data-scroll-x")) || 0,
+                y = parseInt(frame.getAttribute("data-scroll-y")) || 0;
+
+            if (x || y) {
+                dashboardClient._save("frame_" + index, {
+                    pageXOffset: x,
+                    pageYOffset: y
+                });
+            }
+
             var refreshRate = parseInt(frame.getAttribute("data-refresh"));
             if (!isNaN(refreshRate)) {
                 // a number was given in seconds
@@ -134,6 +144,7 @@
                     frame.invoke("reload");
                 }, refreshRate * 1000);
             }
+
         });
     } else {
         // Notify the dashboard that the content script has been loaded

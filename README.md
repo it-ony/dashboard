@@ -44,6 +44,14 @@ The `data-css` attribute defines a custom css injected into the iframe. The valu
 </script>
 ```
 
+data-scroll-x, data-scroll-y
+---
+
+The scroll position of the frames is saved to the local storage, to have a consistent view
+during the refresh. If you want start with a scroll position not read from the
+localStorage you can set the `data-scroll-x` and `data-scroll-y` attributes on the
+corresponding iframe.
+
 
 Tips
 ===
