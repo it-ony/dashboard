@@ -58,7 +58,7 @@ Tips
 
 If you want to embed frames, that deny embedding via the `X-Frame-Options` header, you
 can help yourself with the
-[ignore-x-frame-headers](https://chrome.google.com/webstore/detail/ignore-x-frame-headers) chrome extension.
+[ignore-x-frame-headers](https://chrome.google.com/webstore/detail/ignore-x-frame-headers/gleekbfjekiniecknbkamfmkohkpodhe) chrome extension.
 
 License
 ===
