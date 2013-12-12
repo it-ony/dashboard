@@ -12,11 +12,6 @@
 
     "devtools_page": "chrome/devtools.html",
 
-    "background": {
-        "scripts": ["background.js"],
-        "persistent": false
-    },
-
     "content_scripts": [
         {
             "js": [ "content.js" ],
